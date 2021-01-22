@@ -1,5 +1,5 @@
 body {
-  --perspective: 800px;
+  --perspective: 0;
   min-height: 100vh;
   background: #000000;
   display: flex;
