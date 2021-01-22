@@ -18,7 +18,7 @@ body {
   position: relative;
   transform-style: preserve-3d;
   /* add the below line in your code to rotate the cuboid*/
-  transform: rotateX(24deg) rotateY(32deg); 
+  /*transform: rotateX(24deg) rotateY(32deg);*/ 
 }
 .s {
   background: rgba(0,0,255,0.2);
