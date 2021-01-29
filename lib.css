@@ -10,6 +10,7 @@ body {
 }
 /*cuboid*/
 .c {
+  --bg: rgba(0,0,255,0.2);
   --width: 30vmin; /* change width */
   --height: 20vmin; /* change height */
   --depth: 20vmin; /* change depth */
@@ -21,7 +22,7 @@ body {
   /*transform: rotateX(24deg) rotateY(32deg);*/ 
 }
 .s {
-  background: rgba(0,0,255,0.2);
+  background: var(--bg);
   position: absolute;
   border: 1px #cccccc solid;
 }
