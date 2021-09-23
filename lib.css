@@ -20,7 +20,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.*/
 
-body {
+.scene {
   --perspective: 0;
   min-height: 100vh;
   background: #000000;
@@ -31,7 +31,7 @@ body {
   perspective: var(--perspective); /* change the persective */
 }
 /*cuboid*/
-.c {
+.cube {
   --bg: rgba(0,0,255,0.2);
   --width: 30vmin; /* change width */
   --height: 20vmin; /* change height */
@@ -43,21 +43,21 @@ body {
   /* add the below line in your code to rotate the cuboid*/
   /*transform: rotateX(24deg) rotateY(32deg);*/ 
 }
-.s {
+.cube-s {
   background: var(--bg);
   position: absolute;
   border: 1px #cccccc solid;
 }
-.s:nth-child(1), .s:nth-child(2) {
+.cube-s:nth-child(1), .cube-s:nth-child(2) {
   --co: -0.5;
   height: var(--height);
   width: var(--width);
   transform: translate3d(0 , 0, calc(var(--depth) * var(--co)));
 }
-.s:nth-child(2) {
+.cube-s:nth-child(2) {
   --co: 0.5;
 }
-.s:nth-child(3), .s:nth-child(4) {
+.cube-s:nth-child(3), .cube-s:nth-child(4) {
   --rt: 90deg;
   height: var(--height);
   width: var(--depth);
@@ -65,10 +65,10 @@ body {
   top: 50%;
   transform: translate(-50%, -50%) rotateY(var(--rt)) translate3d(0,0, calc(var(--width) * -0.5));
 }
-.s:nth-child(4) {
+.cube-s:nth-child(4) {
   --rt: -90deg;
 }
-.s:nth-child(5), .s:nth-child(6) {
+.cube-s:nth-child(5), .cube-s:nth-child(6) {
   --rt: -90deg;
   height: var(--depth);
   width: var(--width);
@@ -76,6 +76,6 @@ body {
   top: 50%;
   transform: translate(-50%, -50%) rotateX(var(--rt)) translate3d( 0 , 0, calc(var(--height) * -0.5) );
 }
-.s:nth-child(6) {
+.cube-s:nth-child(6) {
   --rt: 90deg;
 }
